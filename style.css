@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    /* Text Colors */
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --Moderate-Violet: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+    --Grayish-Blue: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+    /* Gradients */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    /* Primary Colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+    --Very-Light-Magenta: hsl(289, 100%, 72%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+figure, img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+body {
+    font-size: 16px;
+    background-color: #fff;
+    min-height: 100vh;
+    min-width: 1440px;
+    overflow: hidden;
+}
+
+.purple-bg {
+    width: 20%;
+    height: 90vh;
+    background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+    position: absolute;
+    border-radius: 0 0 1000px 0;
+    z-index: -1;
+}
+
+.gray-bg {
+    width: 20%;
+    height: 90vh;
+    background-color: rgba(175, 122, 172, 0.063);
+    position: absolute;
+    border-radius: 1000px 0 0 0;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.phone-cont {
+    width: 50%;
+    margin-top: 2rem;
+}
+
+.phone-div {
+    overflow: hidden;
+    background-color: #fff;
+    height: 600px;
+    margin: auto;
+    width: 320px;
+    border-radius: 30px;
+    padding: .8rem;
+    box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.133);
+}
+
+/* Profile */
+.profile {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    color: var(--White);
+    border-radius: 30px 30px 5px 5px;
+    font-size: 14px;
+    background: linear-gradient(-45deg, var(--Light-Magenta), var(--Light-Violet));
+}
+.profile::before {
+    content: "";
+    height: 1.5rem;
+    width: 13rem;
+    border-radius: 0 0 30px 30px;
+    background-color: #fff;
+    position: absolute;
+    left: 17.3rem;
+    top: 2.8rem;
+}
+
+.details {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.prof-img {
+    width: 10%;
+}
+
+.name h3 {
+    color: var(--Light-Grayish-Violet);
+}
+
+.name p {
+    color: var(--Pale-Violet);
+}
+
+.avatar {
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+/* Messages */
+.messages {
+    background-color: var(--Light-Grayish-Violet);
+    height: 80%;
+    border-radius: 0 0 30px 30px;
+    padding: 1rem;
+}
+
+.first-msg, .sec-msg, .third-msg {
+    width: 60%;
+    background-color: hsla(276, 55%, 52%, 0.074);
+    color: var(--Moderate-Violet);
+    border-radius: 20px 20px 20px 0;
+    font-size: 11px;
+    margin-bottom: 1rem;
+    padding: 7px 0 5px 10px;
+}
+
+.first-msg p {
+    max-width: 120px;
+}
+
+.third-msg p {
+    max-width: 150px;
+}
+
+.dog-div {
+    display: block;
+    margin-left: auto;
+    max-width: 60%;
+    margin-bottom: 1rem;
+}
+
+.dog-img {
+    display: flex;
+    gap: .7rem;
+    width: 50px;
+}
+
+.dog-img, img {
+    border-radius: 10px;
+}
+
+.msg-1-right, .msg-2-right {
+    margin-left: auto;
+    width: 60%;
+    background-color: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.044);
+    padding: 7px 0 5px 10px;
+    color: var(--Desaturated-Dark-Violet);
+    border-radius: 20px 20px 0 20px;
+    margin-bottom: 1rem;
+    font-size: 11px;
+}
+
+.msg-2-right {
+    width: 35%;
+}
+
+/* Inputs */
+.thirty-min, .one-hour {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(-45deg, var(--Light-Violet), var(--Light-Magenta));
+    padding: 10px;
+    margin-bottom: .8rem;
+    border-radius: 20px 20px 20px 0;
+    width: 70%;
+    color: #fff;
+}
+
+.thirty-min input, .one-hour input {
+    outline: auto;
+    margin-right: 1rem;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--Very-Light-Magenta);
+    border-radius: 50%;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.thirty-min input::before, .one-hour input::before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+input[type='radio']:checked:before {
+    background: #fff;
+}
+
+input[type='radio']:hover {
+    cursor: pointer;
+}
+
+.thirty-min p, .one-hour p {
+    margin-right: auto;
+    font-size: 11px;
+    color: #ffffffb6;
+}
+
+.thirty-min, .one-hour h4 {
+    font-size: 16px;
+}
+
+/* Submit Input */
+.submit-msg input {
+    width: 97%;
+    padding: 15px 0 10px 10px;
+    border-radius: 30px;
+    border: none;
+}
+
+::placeholder {
+    color: var(--Grayish-Blue);
+}
+
+.submit-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 32%;
+    bottom: 10.6%;
+}
+
+.submit-btn img {
+    width: 11%;
+}
+
+.submit-btn img:hover {
+    cursor: pointer;
+}
+
+/* Simple Booking Div */
+.sp-div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sp-div, h1 {
+    color: var(--Very-Dark-Desaturated-Violet);
+    font-weight: 500;
+}
+
+.sp-div p {
+    line-height: 1.5rem;
+    color: var(--Dark-Grayish-Violet);
+    max-width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+}
+
+
+/* Footer */
+.attribution { font-size: 11px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* Responsiveness */
+/* Smaller Latpops */
+@media screen and (max-width: 1439px) {
+    body {
+        min-width: 901px;
+        max-width: 1439px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 17%;
+        top: 6%;
+    }
+    .submit-btn {
+        position: sticky;
+        margin-left: 15.5rem;
+        bottom: 1.1rem;
+        width: 100%;
+    }
+
+    .purple-bg {
+        width: 25%;
+        height: 90vh;
+        border-radius: 0 0 100% 0;
+    }
+
+    .gray-bg {
+        width: 25%;
+        height: 80vh;
+        bottom: 0;
+    }
+
+    .sp-div h1 {
+        font-weight: 500;
+        font-size: 42px;
+    }
+    
+}
+
+/* Tablets */
+@media screen and (max-width: 900px) {
+    body {
+        min-width: 750px;
+        max-width: 900px;
+        overflow: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+
+    .profile::before {
+        left: 38%;
+        top: 4%;
+    }
+    .submit-btn {
+        position: sticky;
+        margin-left: 14.5rem;
+        bottom: 1.2rem;
+        width: 100%;
+    }
+
+    .purple-bg {
+        width: 50%;
+        height: 70vh;
+        border-radius: 0 0 100% 0;
+    }
+
+    .gray-bg {
+        width: 50%;
+        height: 60vh;
+        bottom: 0;
+    }
+
+    .phone-cont {
+        width: auto;
+    }
+
+    .phone-div {
+        width: 300px;
+    }
+
+    .sp-div {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .attribution {
+        margin-top: 1rem;
+    }
+
+    .sp-div h1 {
+        font-weight: 500;
+        font-size: 42px;
+    }
+
+    .sp-div p {
+        width: auto;
+        margin: 0 auto;
+        font-weight: 400;
+        margin-top: 1rem;
+        font-size: 13px;
+    }
+    
+    .dog-div {
+        max-width: 65%;
+    }
+}
+@media screen and (max-width: 835px) {
+    body {
+        min-width: 820px;
+        max-width: 835px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 37%;
+        top: 4%;
+    }
+}
+@media screen and (max-width: 819px) {
+    body {
+        min-width: 800px;
+        max-width: 819px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 37%;
+        top: 3.5%;
+    }
+}
+@media screen and (max-width: 799px) {
+    body {
+        min-width: 750px;
+        max-width: 799px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 36%;
+        top: 4.5%;
+    }
+}
+
+/* Larger Mobiles */
+@media screen and (max-width: 450px) {
+    body {
+        min-width: 414px;
+        max-width: 450px;
+        overflow: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        margin: auto;
+        width: 100%;
+    }
+
+    .profile::before {
+        left: 25%;
+        top: 5.8%;
+    }
+    .submit-btn {
+        position: sticky;
+        margin-left: 14.5rem;
+        bottom: 1.2rem;
+        width: 100%;
+    }
+
+    .purple-bg {
+        width: 50%;
+        height: 70vh;
+        border-radius: 0 0 100% 0;
+    }
+
+    .gray-bg {
+        width: 50%;
+        height: 60vh;
+        bottom: -20%;
+    }
+
+    .phone-cont {
+        width: auto;
+    }
+
+    .phone-div {
+        width: 300px;
+    }
+
+    .sp-div {
+        width: auto;
+        margin: auto;
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .attribution {
+        margin-top: 1rem;
+    }
+
+    .sp-div h1 {
+        font-weight: 500;
+        font-size: 42px;
+    }
+
+    .sp-div p {
+        width: auto;
+        margin: 0 auto;
+        font-weight: 400;
+        margin-top: 1rem;
+        font-size: 13px;
+    }
+    
+    .dog-div {
+        max-width: 65%;
+    }
+}
+@media screen and (max-width: 413px) {
+    body {
+        min-width: 393px;
+        max-width: 413px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 23%;
+        top: 5.3%;
+    }
+}
+/* Medium Mobiles */
+@media screen and (max-width: 392px) {
+    body {
+        min-width: 370px;
+        max-width: 392px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 22%;
+        top: 6.5%;
+    }
+}
+@media screen and (max-width: 360px) {
+    body {
+        min-width: 321px;
+        max-width: 360px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 21%;
+        top: 5.5%;
+    }
+
+}
+/* Smaller Mobiles */
+@media screen and (max-width: 320px) {
+    body {
+        min-width: 300px;
+        max-width: 320px;
+        overflow: auto;
+    }
+
+    .profile::before {
+        left: 18%;
+        top: 9%;
+    }
+}
+
